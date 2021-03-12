@@ -1,0 +1,50 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\nazar\\RiderProjects\\Converter\\Converter\\Converter.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\nazar\\RiderProjects\\Converter\\Converter\\Converter.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\nazar\\RiderProjects\\Converter\\Converter\\Converter.csproj",
+        "projectName": "Converter",
+        "projectPath": "C:\\Users\\nazar\\RiderProjects\\Converter\\Converter\\Converter.csproj",
+        "packagesPath": "C:\\Users\\nazar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nazar\\RiderProjects\\Converter\\Converter\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\nazar\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "targetAlias": "net48",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "targetAlias": "net48",
+          "runtimeIdentifierGraphPath": "C:\\Users\\nazar\\.dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win7-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

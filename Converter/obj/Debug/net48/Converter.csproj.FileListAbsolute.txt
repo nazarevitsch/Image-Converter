@@ -1,0 +1,9 @@
+C:\Users\nazar\RiderProjects\Converter\Converter\bin\Debug\net48\Converter.exe.config
+C:\Users\nazar\RiderProjects\Converter\Converter\bin\Debug\net48\Converter.exe
+C:\Users\nazar\RiderProjects\Converter\Converter\bin\Debug\net48\Converter.pdb
+C:\Users\nazar\RiderProjects\Converter\Converter\obj\Debug\net48\Converter.csprojAssemblyReference.cache
+C:\Users\nazar\RiderProjects\Converter\Converter\obj\Debug\net48\Converter.AssemblyInfoInputs.cache
+C:\Users\nazar\RiderProjects\Converter\Converter\obj\Debug\net48\Converter.AssemblyInfo.cs
+C:\Users\nazar\RiderProjects\Converter\Converter\obj\Debug\net48\Converter.csproj.CoreCompileInputs.cache
+C:\Users\nazar\RiderProjects\Converter\Converter\obj\Debug\net48\Converter.exe
+C:\Users\nazar\RiderProjects\Converter\Converter\obj\Debug\net48\Converter.pdb

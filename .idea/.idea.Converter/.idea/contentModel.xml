@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\nazar\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\nazar\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Converter.-1806555431.00" t="ExcludeRecursive" />
+    <e p="C:\Users\nazar\RiderProjects\Converter" t="IncludeFlat">
+      <e p="Converter" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="BMPReader.cs" t="Include" />
+        <e p="BmpWriter.cs" t="Include" />
+        <e p="Converter.csproj" t="IncludeRecursive" />
+        <e p="IImageConverter.cs" t="Include" />
+        <e p="IImageReader.cs" t="Include" />
+        <e p="IImageWriter.cs" t="Include" />
+        <e p="Image" t="Include">
+          <e p="BmpImage.cs" t="Include" />
+          <e p="IImage.cs" t="Include" />
+          <e p="PpmImage.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="net48" t="Include">
+              <e p="Converter.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="resources" t="Include">
+          <e p="dog.bmp" t="Include" />
+          <e p="dog.gif" t="Include" />
+          <e p="dog.png" t="Include" />
+          <e p="dog2.bmp" t="Include" />
+          <e p="test.bmp" t="Include" />
+        </e>
+      </e>
+      <e p="Converter.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

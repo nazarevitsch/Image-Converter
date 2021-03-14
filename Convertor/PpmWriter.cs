@@ -5,7 +5,7 @@ namespace Converter
 {
     public class PpmWriter : IFormatWriter
     {
-        public void Write(IImageFormat format)
+        public void Write(IImageFormat format, string path = "test.ppm")
         {
             var headers = format.Headers;
             StringBuilder sb = new StringBuilder(1000);
@@ -24,8 +24,8 @@ namespace Converter
                 bytes[bytePos + 2] = (byte)_pixel.Blue;
             }
             
-            File.WriteAllText("test.ppm", sb.ToString());
-            using var stream = new FileStream("test.ppm", FileMode.Append);
+            File.WriteAllText(path, sb.ToString());
+            using var stream = new FileStream(path, FileMode.Append);
             stream.Write(bytes, 0, bytes.Length);
         }
     }

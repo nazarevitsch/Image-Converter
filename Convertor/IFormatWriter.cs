@@ -2,6 +2,6 @@
 {
     public interface IFormatWriter
     {
-        public void Write(IImageFormat format);
+        public void Write(IImageFormat format, string path);
     }
 }

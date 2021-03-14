@@ -1,0 +1,16 @@
+D:\Work\ImageConvertor\Convertor\bin\Debug\net5.0\Convertor.exe
+D:\Work\ImageConvertor\Convertor\bin\Debug\net5.0\Convertor.deps.json
+D:\Work\ImageConvertor\Convertor\bin\Debug\net5.0\Convertor.runtimeconfig.json
+D:\Work\ImageConvertor\Convertor\bin\Debug\net5.0\Convertor.runtimeconfig.dev.json
+D:\Work\ImageConvertor\Convertor\bin\Debug\net5.0\Convertor.dll
+D:\Work\ImageConvertor\Convertor\bin\Debug\net5.0\ref\Convertor.dll
+D:\Work\ImageConvertor\Convertor\bin\Debug\net5.0\Convertor.pdb
+D:\Work\ImageConvertor\Convertor\obj\Debug\net5.0\Convertor.csprojAssemblyReference.cache
+D:\Work\ImageConvertor\Convertor\obj\Debug\net5.0\Convertor.GeneratedMSBuildEditorConfig.editorconfig
+D:\Work\ImageConvertor\Convertor\obj\Debug\net5.0\Convertor.AssemblyInfoInputs.cache
+D:\Work\ImageConvertor\Convertor\obj\Debug\net5.0\Convertor.AssemblyInfo.cs
+D:\Work\ImageConvertor\Convertor\obj\Debug\net5.0\Convertor.csproj.CoreCompileInputs.cache
+D:\Work\ImageConvertor\Convertor\obj\Debug\net5.0\Convertor.dll
+D:\Work\ImageConvertor\Convertor\obj\Debug\net5.0\ref\Convertor.dll
+D:\Work\ImageConvertor\Convertor\obj\Debug\net5.0\Convertor.pdb
+D:\Work\ImageConvertor\Convertor\obj\Debug\net5.0\Convertor.genruntimeconfig.cache

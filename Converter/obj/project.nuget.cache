@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "pW8rBqsL8Bv4E1kGoCHRdlGVm94/bG9YNeHbchtTCseQtfy+plDW3juNp06Sx1hKa/3jDh/vPUwSW3csIk6YZA==",
+  "dgSpecHash": "LNvp6qpgtZ7Zo0ucznxJ3ofX1Q/NaUJ/uf14Q/3wGV9fdQtsJgg+RMJ4uhIJTRXEsIecMM09gQCeddcTm95Jcg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nazar\\RiderProjects\\Converter\\Converter\\Converter.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\Work\\ImageConvertor\\Converter\\Converter.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Sasha\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.0\\microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
+    "C:\\Users\\Sasha\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net48\\1.0.0\\microsoft.netframework.referenceassemblies.net48.1.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

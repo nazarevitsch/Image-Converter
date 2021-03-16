@@ -4,36 +4,21 @@
     <projectFile>Converter/Converter.csproj</projectFile>
     <projectFile>Convertor/Convertor.csproj</projectFile>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="20260254-d194-479e-93bd-3b454d832029" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Converter/resources/blackbuck.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Converter/resources/boxes_1.ppm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Converter/resources/sample.ppm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Converter/resources/stop01.ppm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Convertor/BmpToPpmConverter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Convertor/BmpWriter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Convertor/Converter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Convertor/Formats/Bmp.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Convertor/Formats/Bmp_old.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Convertor/Formats/IImageFormat.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Convertor/Formats/Ppm.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Convertor/IFormatWriter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Convertor/IImageConvertor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Convertor/Pixel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Convertor/PpmToBmpConvertor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Convertor/PpmWriter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Convertor/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Convertor/images/blackbuck.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Convertor/images/boxes_1.ppm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Convertor/images/dog.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Convertor/images/sample.ppm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Convertor/images/stop01.ppm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Convertor/test.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Convertor/test.ppm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Convertor/Compress/GIfLwz.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Convertor/Compress/SharpLZW/ANSI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Convertor/Compress/SharpLZW/BitReader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Convertor/Compress/SharpLZW/ExtensionMethods.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Convertor/Compress/SharpLZW/LZWDecoder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Convertor/Compress/SharpLZW/LZWEncoder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Convertor/Formats/Gif.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Convertor/images/dog.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Converter/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Converter/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Converter/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Converter/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Converter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Converter/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converter.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Converter.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Converter/obj/Converter.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Converter/obj/Converter.csproj.nuget.dgspec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Converter/obj/Converter.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Converter/obj/Converter.csproj.nuget.g.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Converter/obj/Converter.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/Converter/obj/Converter.csproj.nuget.g.targets" afterDir="false" />
@@ -43,6 +28,30 @@
       <change beforePath="$PROJECT_DIR$/Converter/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Converter/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Converter/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Converter/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Converter/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Converter/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/BigTest.bmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/BigTest.ppm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/Convertor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/Convertor.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/Pixel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/Pixel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/PpmToBmpConvertor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/PpmToBmpConvertor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/bin/Debug/net5.0/Convertor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/bin/Debug/net5.0/Convertor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/bin/Debug/net5.0/Convertor.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/bin/Debug/net5.0/Convertor.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/bin/Debug/net5.0/Convertor.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/bin/Debug/net5.0/Convertor.runtimeconfig.dev.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/bin/Debug/net5.0/ref/Convertor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/bin/Debug/net5.0/ref/Convertor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/obj/Convertor.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/obj/Convertor.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/obj/Convertor.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/obj/Convertor.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/obj/Debug/net5.0/Convertor.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/obj/Debug/net5.0/Convertor.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/obj/Debug/net5.0/Convertor.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/obj/Debug/net5.0/Convertor.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/obj/Debug/net5.0/Convertor.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/obj/Debug/net5.0/Convertor.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/obj/Debug/net5.0/Convertor.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/obj/Debug/net5.0/Convertor.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/obj/Debug/net5.0/Convertor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/obj/Debug/net5.0/Convertor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/obj/Debug/net5.0/Convertor.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/obj/Debug/net5.0/Convertor.genruntimeconfig.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/obj/Debug/net5.0/Convertor.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/obj/Debug/net5.0/Convertor.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/obj/Debug/net5.0/ref/Convertor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/obj/Debug/net5.0/ref/Convertor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,10 +61,36 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/70AA7F05-5E5E-4FEE-A687-60D7E8D62395/3F/String.Manipulation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/39E023EE-8F10-461C-AD7A-1B3F66CECE34/92/931f8c30/LZWDecoder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/70AA7F05-5E5E-4FEE-A687-60D7E8D62395/DE/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/70AA7F05-5E5E-4FEE-A687-60D7E8D62395/3FA/Dictionary.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/70AA7F05-5E5E-4FEE-A687-60D7E8D62395/67/BitConverter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/39E023EE-8F10-461C-AD7A-1B3F66CECE34/f6/289ce436/ANSI.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Converter/Pixel.cs" />
+      <option value="$PROJECT_DIR$/Convertor/BmpWriter.cs" />
+      <option value="$PROJECT_DIR$/Convertor/Pixel.cs" />
+      <option value="$PROJECT_DIR$/Convertor/PpmToBmpConvertor.cs" />
+      <option value="$PROJECT_DIR$/Convertor/Compress/SharpLZW/TestLZW/Program.cs" />
+      <option value="$PROJECT_DIR$/Convertor/Compress/SharpLZW/LZW/ExtensionMethods.cs" />
+      <option value="$PROJECT_DIR$/Convertor/Compress/ANSI.cs" />
+      <option value="$PROJECT_DIR$/Convertor/Compress/LZWDecoder.cs" />
+      <option value="$PROJECT_DIR$/Convertor/Formats/Gif.cs" />
+      <option value="$PROJECT_DIR$/Convertor/Compress/SharpLZW/LZWDecoder.cs" />
       <option value="$PROJECT_DIR$/Convertor/Program.cs" />
+      <option value="$PROJECT_DIR$/Convertor/Compress/GIfLwz.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1pfGiUcaimG80yaiuXPWdZN3ut2" />
@@ -64,11 +99,14 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.35064936" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SharpLZW" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="SolutionBuilderGeneralOptionsPageId" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Project.Convertor">
@@ -124,6 +162,11 @@
       <workItem from="1615566861077" duration="14667000" />
       <workItem from="1615668554253" duration="2797000" />
       <workItem from="1615728051944" duration="580000" />
+      <workItem from="1615742317570" duration="2234000" />
+      <workItem from="1615756187769" duration="3165000" />
+      <workItem from="1615839343263" duration="12847000" />
+      <workItem from="1615923076622" duration="490000" />
+      <workItem from="1615930930642" duration="4550000" />
     </task>
     <servers />
   </component>
@@ -142,8 +185,97 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/39E023EE-8F10-461C-AD7A-1B3F66CECE34/92/931f8c30/LZWDecoder.cs</url>
+          <line>28</line>
+          <properties documentPath="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/39E023EE-8F10-461C-AD7A-1B3F66CECE34/92/931f8c30/LZWDecoder.cs" initialLine="28" containingFunctionPresentation="method 'Decode'">
+            <startOffsets>
+              <option value="797" />
+            </startOffsets>
+            <endOffsets>
+              <option value="847" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/39E023EE-8F10-461C-AD7A-1B3F66CECE34/f6/289ce436/ANSI.cs</url>
+          <line>22</line>
+          <properties documentPath="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/39E023EE-8F10-461C-AD7A-1B3F66CECE34/f6/289ce436/ANSI.cs" initialLine="22" containingFunctionPresentation="constructor 'ANSI'">
+            <startOffsets>
+              <option value="642" />
+            </startOffsets>
+            <endOffsets>
+              <option value="757" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Convertor/Compress/SharpLZW/LZWDecoder.cs</url>
+          <line>43</line>
+          <properties documentPath="$PROJECT_DIR$/Convertor/Compress/LZWDecoder.cs" initialLine="43" containingFunctionPresentation="method 'DecodeFromCodes'">
+            <startOffsets>
+              <option value="1365" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1387" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Convertor/Compress/SharpLZW/LZWDecoder.cs</url>
+          <line>87</line>
+          <properties documentPath="$PROJECT_DIR$/Convertor/Compress/LZWDecoder.cs" initialLine="87" containingFunctionPresentation="method 'Decode'">
+            <startOffsets>
+              <option value="2647" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2661" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Convertor/Formats/Gif.cs</url>
+          <line>91</line>
+          <properties documentPath="$PROJECT_DIR$/Convertor/Formats/Gif.cs" initialLine="88" containingFunctionPresentation="method 'ReadData'">
+            <startOffsets>
+              <option value="2985" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3045" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Convertor/Formats/Gif.cs</url>
+          <line>149</line>
+          <properties documentPath="$PROJECT_DIR$/Convertor/Formats/Gif.cs" initialLine="149" containingFunctionPresentation="method 'ReadData'">
+            <startOffsets>
+              <option value="6276" />
+            </startOffsets>
+            <endOffsets>
+              <option value="6337" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

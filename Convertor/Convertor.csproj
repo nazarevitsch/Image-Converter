@@ -5,4 +5,10 @@
         <TargetFramework>net5.0</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Reference Include="SharpLZW, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>Compress\SharpLZW\LZW\bin\Release\SharpLZW.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
 </Project>

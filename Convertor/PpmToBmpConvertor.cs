@@ -4,13 +4,13 @@ namespace Converter
     {
         public IImageFormat Convert(IImageFormat format)
         {
-            var bmp = new Bmp();
-            bmp.Bytes = format.Bytes;
             var pictureSize = format.Headers["Size"].Split(" ");
-            var height = int.Parse(pictureSize[0]);
-            var width = int.Parse(pictureSize[1]);
-            bmp.Headers["Width"] = "" + width;
-            bmp.Headers["Height"] = "" + height;
+            var bmp = new Bmp
+            {
+                Bytes = format.Bytes,
+                Pixels = format.Pixels,
+                Headers = {["Width"] = pictureSize[0], ["Height"] = pictureSize[1]}
+            };
             return bmp;
         }
     }

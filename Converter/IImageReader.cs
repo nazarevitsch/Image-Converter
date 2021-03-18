@@ -1,6 +1,6 @@
 ﻿namespace Converter
 {
-    public interface IImageReader : IImageConverter
+    public interface IImageReader
     {
         
     }

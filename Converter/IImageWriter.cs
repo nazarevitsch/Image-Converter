@@ -1,6 +1,6 @@
 ﻿namespace Converter
 {
-    public interface IImageWriter : IImageConverter
+    public interface IImageWriter
     {
         
     }

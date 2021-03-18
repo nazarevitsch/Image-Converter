@@ -37,6 +37,12 @@
       "frameworks": {
         "net48": {
           "targetAlias": "net48",
+          "dependencies": {
+            "PNGCompressor": {
+              "target": "Package",
+              "version": "[1.0.5, )"
+            }
+          },
           "runtimeIdentifierGraphPath": "C:\\Users\\nazar\\.dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       },

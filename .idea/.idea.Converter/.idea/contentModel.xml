@@ -9,13 +9,21 @@
         <e p="BMPReader.cs" t="Include" />
         <e p="BmpWriter.cs" t="Include" />
         <e p="Converter.csproj" t="IncludeRecursive" />
-        <e p="IImageConverter.cs" t="Include" />
         <e p="IImageReader.cs" t="Include" />
         <e p="IImageWriter.cs" t="Include" />
         <e p="Image" t="Include">
-          <e p="BmpImage.cs" t="Include" />
-          <e p="IImage.cs" t="Include" />
-          <e p="PpmImage.cs" t="Include" />
+          <e p="bmp" t="Include">
+            <e p="BmpImage.cs" t="Include" />
+          </e>
+          <e p="Image.cs" t="Include" />
+          <e p="png" t="Include">
+            <e p="PngChunk.cs" t="Include" />
+            <e p="PngChunkType.cs" t="Include" />
+            <e p="PngHeader.cs" t="Include" />
+          </e>
+          <e p="ppm" t="Include">
+            <e p="PpmImage.cs" t="Include" />
+          </e>
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -24,12 +32,15 @@
             </e>
           </e>
         </e>
+        <e p="PngReader.cs" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="resources" t="Include">
+          <e p="BigTest.bmp" t="Include" />
+          <e p="BigTest.png" t="Include" />
           <e p="dog.bmp" t="Include" />
           <e p="dog.gif" t="Include" />
           <e p="dog.png" t="Include" />
-          <e p="dog2.bmp" t="Include" />
+          <e p="index.png" t="Include" />
           <e p="test.bmp" t="Include" />
         </e>
       </e>

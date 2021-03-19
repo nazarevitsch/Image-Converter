@@ -15,27 +15,13 @@ namespace Converter
         public Image.Image ReadImage(String fileName)
         {
             byte[] array = File.ReadAllBytes(fileName);
-            
-            // for (int i = 0; i < array.Length; i++)
-            // {
-            //     Console.WriteLine("I: " + i + ", " + array[i] + ", CHAR: " + (char) array[i]);
-            //     if (i > 40) break;
-            // }
 
             List<PngChunk> chunks = ReadChunks(array);
             PngHeader header = GetPngHeader(chunks);
-            
-            Console.WriteLine(header);
-            
-            byte[] decompressedData = Decompressing(GetCompressedDataFromAllIdatChunks(chunks));
 
-            // for (int i = 0; i < decompressedData.Length; i++)
-            // {
-            //     Console.WriteLine("I: " + i + ", " + decompressedData[i]);
-            // }
-            
+            byte[] decompressedData = Decompressing(GetCompressedDataFromAllIdatChunks(chunks));
             Image.Image image = new Image.Image(header.Width, header.Height, Defiltering(decompressedData, header));
-            // image.PrintPixels();
+            
             return image;
         }
 
@@ -52,9 +38,6 @@ namespace Converter
                 {
                     for (int l = 1; l < pngHeader.Width; l++)
                     {
-                        // Console.WriteLine("L: " + l);
-                        // Console.WriteLine("1: " + (starOfRow + 1 + (bytesPerPixel * l)) + ", 2: " + (starOfRow + 1 + (bytesPerPixel * l)) + ", 3: " + (starOfRow + 1 + (bytesPerPixel * (l - 1))));
-                        // Console.WriteLine("S1: " + filteredData[(starOfRow + 1 + (bytesPerPixel * l))] + ", S2: " + filteredData[(starOfRow + 1 + (bytesPerPixel * (l - 1)))]);
                         filteredData[starOfRow + 1 + (bytesPerPixel * l)] = (byte)
                             (filteredData[starOfRow + 1 + (bytesPerPixel * l)] + filteredData[starOfRow + 1 + (bytesPerPixel * (l - 1))]);
                         filteredData[starOfRow + 2 + (bytesPerPixel * l)] = (byte)

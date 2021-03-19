@@ -30,12 +30,15 @@ namespace Converter
             image.Width = width;
             image.Height = height;
             image.Pixels = array.Skip(14 + headerSize).Take(imageSize).ToArray();
-            
-            // Console.WriteLine("F.S.: " + fileSize);
-            // Console.WriteLine("H.S.: " + headerSize);
-            // Console.WriteLine("W.: " + width);
-            // Console.WriteLine("H.: " + height);
-            // Console.WriteLine("I.S.: " + imageSize);
+            for (int i = 0; i < image.Pixels.Length; i++)
+            {
+                Console.WriteLine(i + ": " + image.Pixels[i]);
+            }
+            Console.WriteLine("F.S.: " + fileSize);
+            Console.WriteLine("H.S.: " + headerSize);
+            Console.WriteLine("W.: " + width);
+            Console.WriteLine("H.: " + height);
+            Console.WriteLine("I.S.: " + imageSize);
             // for (int i = 0; i < array.Length; i++)
             // {
             //     Console.WriteLine(i + ": " + array[i]);

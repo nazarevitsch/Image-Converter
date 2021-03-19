@@ -17,8 +17,10 @@ namespace Converter
             
             PngReader pngReader = new PngReader();
             Image.Image png = pngReader.ReadImage(@"C:\Users\nazar\RiderProjects\\Converter\Converter\resources\dog.png");
-            pngReader.ReadImage(@"C:\Users\nazar\RiderProjects\\Converter\Converter\resources\BigTest.png");
-            pngReader.ReadImage(@"C:\Users\nazar\RiderProjects\\Converter\Converter\resources\index.png");
+            // pngReader.ReadImage(@"C:\Users\nazar\RiderProjects\\Converter\Converter\resources\BigTest.png");
+            // pngReader.ReadImage(@"C:\Users\nazar\RiderProjects\\Converter\Converter\resources\index.png");
+            // pngReader.ReadImage(@"C:\Users\nazar\RiderProjects\\Converter\Converter\resources\ricardo.png");
+            // pngReader.ReadImage(@"C:\Users\nazar\RiderProjects\\Converter\Converter\resources\git.png");
         }
     }
 }

@@ -9,6 +9,7 @@ namespace Converter
         private static int HeaderSize = 14;
         private static int HeaderInfoSize = 40;
         private static byte[] HeaderSizeBytse = BitConverter.GetBytes(HeaderInfoSize);
+        
         public void WriteImage(BmpImage image, String path)
         {
             byte[] widthBytes = BitConverter.GetBytes(image.Width);
@@ -60,5 +61,7 @@ namespace Converter
             }
             File.WriteAllBytes(path, imageBytes);
         }
+        
+       
     }
 }

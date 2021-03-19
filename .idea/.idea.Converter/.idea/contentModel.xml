@@ -16,6 +16,7 @@
             <e p="BmpImage.cs" t="Include" />
           </e>
           <e p="Image.cs" t="Include" />
+          <e p="Pixel.cs" t="Include" />
           <e p="png" t="Include">
             <e p="PngChunk.cs" t="Include" />
             <e p="PngChunkType.cs" t="Include" />
@@ -40,7 +41,9 @@
           <e p="dog.bmp" t="Include" />
           <e p="dog.gif" t="Include" />
           <e p="dog.png" t="Include" />
+          <e p="git.png" t="Include" />
           <e p="index.png" t="Include" />
+          <e p="ricardo.png" t="Include" />
           <e p="test.bmp" t="Include" />
         </e>
       </e>

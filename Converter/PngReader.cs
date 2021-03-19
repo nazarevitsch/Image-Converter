@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
+  using System.Runtime.Remoting.Messaging;
   using Converter.Image;
 
 
@@ -27,13 +28,56 @@ namespace Converter
             Console.WriteLine(header);
             
             byte[] decompressedData = Decompressing(GetCompressedDataFromAllIdatChunks(chunks));
-            Console.WriteLine(decompressedData.Length);
-            Console.WriteLine(decompressedData[0]);
+
             // for (int i = 0; i < decompressedData.Length; i++)
             // {
-            //     Console.WriteLine("I: " + i + ", " + decompressedData[i] + ", CHAR: " + (char) decompressedData[i]);
+            //     Console.WriteLine("I: " + i + ", " + decompressedData[i]);
             // }
-            return null;
+            
+            Image.Image image = new Image.Image(header.Width, header.Height, Defiltering(decompressedData, header));
+            // image.PrintPixels();
+            return image;
+        }
+
+        private Pixel[][] Defiltering(byte[] filteredData, PngHeader pngHeader)
+        {
+            Pixel[][] pixels = new Pixel[pngHeader.Height][];
+            int bytesPerPixel = pngHeader.ColorType == 2 ? 3 : 4;
+            for (int i = 0; i < pngHeader.Height; i++)
+            {
+                pixels[i] = new Pixel[pngHeader.Width];
+                int starOfRow = i * bytesPerPixel * pngHeader.Width + i;
+                int filtering = filteredData[starOfRow];
+                if (filtering == 1)
+                {
+                    for (int l = 1; l < pngHeader.Width; l++)
+                    {
+                        // Console.WriteLine("L: " + l);
+                        // Console.WriteLine("1: " + (starOfRow + 1 + (bytesPerPixel * l)) + ", 2: " + (starOfRow + 1 + (bytesPerPixel * l)) + ", 3: " + (starOfRow + 1 + (bytesPerPixel * (l - 1))));
+                        // Console.WriteLine("S1: " + filteredData[(starOfRow + 1 + (bytesPerPixel * l))] + ", S2: " + filteredData[(starOfRow + 1 + (bytesPerPixel * (l - 1)))]);
+                        filteredData[starOfRow + 1 + (bytesPerPixel * l)] = (byte)
+                            (filteredData[starOfRow + 1 + (bytesPerPixel * l)] + filteredData[starOfRow + 1 + (bytesPerPixel * (l - 1))]);
+                        filteredData[starOfRow + 2 + (bytesPerPixel * l)] = (byte)
+                            (filteredData[starOfRow + 2 + (bytesPerPixel * l)] + filteredData[starOfRow + 2 + (bytesPerPixel * (l - 1))]);
+                        filteredData[starOfRow + 3 + (bytesPerPixel * l)] = (byte)
+                            (filteredData[starOfRow + 3 + (bytesPerPixel * l)] + filteredData[starOfRow + 3 + (bytesPerPixel * (l - 1))]);
+                        if (bytesPerPixel == 4) filteredData[starOfRow + 4 + (bytesPerPixel * l)] = (byte)
+                            (filteredData[starOfRow + 4 + (bytesPerPixel * l)] + filteredData[starOfRow + 4 + (bytesPerPixel * (l - 1))]);
+                    }
+                }
+                for (int l = 0; l < pngHeader.Width; l++)
+                {
+                    pixels[i][l] = pngHeader.ColorType == 2
+                        ? new Pixel(filteredData[(starOfRow + 1) + (bytesPerPixel * l)],
+                            filteredData[(starOfRow + 2) + (bytesPerPixel * l)],
+                            filteredData[(starOfRow + 3) + (bytesPerPixel * l)])
+                        : new Pixel(filteredData[(starOfRow + 1) + (bytesPerPixel * l)],
+                            filteredData[(starOfRow + 2) + (bytesPerPixel * l)],
+                            filteredData[(starOfRow + 3) + (bytesPerPixel * l)],
+                            filteredData[(starOfRow + 4) + (bytesPerPixel * l)]);
+                }
+            }
+            return pixels;
         }
 
         private PngHeader GetPngHeader(List<PngChunk> chunks)
@@ -42,11 +86,6 @@ namespace Converter
             {
                 if (chunks[i].PngChunkType.Equals(PngChunkType.IHDR))
                 {
-                    for (int j = 0; j < chunks[i].ChunkBody.Length; j++)
-                    {
-                        Console.Write(chunks[i].ChunkBody[j] + ", ");
-                    }
-                    Console.WriteLine();
                     PngHeader header = new PngHeader();
                     byte[] widthBytes = {chunks[i].ChunkBody[3], chunks[i].ChunkBody[2], chunks[i].ChunkBody[1], chunks[i].ChunkBody[0]};
                     header.Width = BitConverter.ToInt32(widthBytes, 0);

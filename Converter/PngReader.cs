@@ -18,49 +18,98 @@ namespace Converter
 
             List<PngChunk> chunks = ReadChunks(array);
             PngHeader header = GetPngHeader(chunks);
+            
+            Console.WriteLine(header);
 
             byte[] decompressedData = Decompressing(GetCompressedDataFromAllIdatChunks(chunks));
-            Image.Image image = new Image.Image(header.Width, header.Height, Defiltering(decompressedData, header));
+            byte[] unfilteredData = Unfiltering(decompressedData, header);
+            
+            Image.Image image = new Image.Image(header.Width, header.Height, GetPixelMatrix(unfilteredData, header));
             
             return image;
         }
 
-        private Pixel[][] Defiltering(byte[] filteredData, PngHeader pngHeader)
+        private Pixel[][] GetPixelMatrix(byte[] unfilteredData, PngHeader pngHeader)
         {
             Pixel[][] pixels = new Pixel[pngHeader.Height][];
             int bytesPerPixel = pngHeader.ColorType == 2 ? 3 : 4;
             for (int i = 0; i < pngHeader.Height; i++)
             {
-                pixels[i] = new Pixel[pngHeader.Width];
                 int starOfRow = i * bytesPerPixel * pngHeader.Width + i;
-                int filtering = filteredData[starOfRow];
-                if (filtering == 1)
-                {
-                    for (int l = 1; l < pngHeader.Width; l++)
-                    {
-                        filteredData[starOfRow + 1 + (bytesPerPixel * l)] = (byte)
-                            (filteredData[starOfRow + 1 + (bytesPerPixel * l)] + filteredData[starOfRow + 1 + (bytesPerPixel * (l - 1))]);
-                        filteredData[starOfRow + 2 + (bytesPerPixel * l)] = (byte)
-                            (filteredData[starOfRow + 2 + (bytesPerPixel * l)] + filteredData[starOfRow + 2 + (bytesPerPixel * (l - 1))]);
-                        filteredData[starOfRow + 3 + (bytesPerPixel * l)] = (byte)
-                            (filteredData[starOfRow + 3 + (bytesPerPixel * l)] + filteredData[starOfRow + 3 + (bytesPerPixel * (l - 1))]);
-                        if (bytesPerPixel == 4) filteredData[starOfRow + 4 + (bytesPerPixel * l)] = (byte)
-                            (filteredData[starOfRow + 4 + (bytesPerPixel * l)] + filteredData[starOfRow + 4 + (bytesPerPixel * (l - 1))]);
-                    }
-                }
+                pixels[i] = new Pixel[pngHeader.Width];
                 for (int l = 0; l < pngHeader.Width; l++)
                 {
                     pixels[i][l] = pngHeader.ColorType == 2
-                        ? new Pixel(filteredData[(starOfRow + 1) + (bytesPerPixel * l)],
-                            filteredData[(starOfRow + 2) + (bytesPerPixel * l)],
-                            filteredData[(starOfRow + 3) + (bytesPerPixel * l)])
-                        : new Pixel(filteredData[(starOfRow + 1) + (bytesPerPixel * l)],
-                            filteredData[(starOfRow + 2) + (bytesPerPixel * l)],
-                            filteredData[(starOfRow + 3) + (bytesPerPixel * l)],
-                            filteredData[(starOfRow + 4) + (bytesPerPixel * l)]);
+                        ? new Pixel(unfilteredData[(starOfRow + 1) + (bytesPerPixel * l)],
+                            unfilteredData[(starOfRow + 2) + (bytesPerPixel * l)],
+                            unfilteredData[(starOfRow + 3) + (bytesPerPixel * l)])
+                        : new Pixel(unfilteredData[(starOfRow + 1) + (bytesPerPixel * l)],
+                            unfilteredData[(starOfRow + 2) + (bytesPerPixel * l)],
+                            unfilteredData[(starOfRow + 3) + (bytesPerPixel * l)],
+                            unfilteredData[(starOfRow + 4) + (bytesPerPixel * l)]);
                 }
             }
             return pixels;
+        }
+
+        private byte[] Unfiltering(byte[] filteredData, PngHeader pngHeader)
+        {
+            int bytesPerPixel = pngHeader.ColorType == 2 ? 3 : 4;
+            for (int i = 0; i < filteredData.Length;)
+            {
+                if (filteredData[i] == 1)
+                {
+                    for (int l = i + 1 + bytesPerPixel; l < pngHeader.Width * bytesPerPixel + 1 + i; l++)
+                    {
+                        filteredData[l] += filteredData[l - bytesPerPixel];
+                    }
+                }
+                if (filteredData[i] == 2)
+                {
+                    for (int l = i + 1; l < pngHeader.Width * bytesPerPixel + 1 + i; l++)
+                    {
+                        filteredData[l] += filteredData[l - (pngHeader.Width * bytesPerPixel) - 1];
+                    }
+                }
+                if (filteredData[i] == 3)
+                {
+                    for (int l = i + 1; l < i + 1 + bytesPerPixel; l++)
+                    {
+                        filteredData[l] += (byte)(filteredData[l - pngHeader.Width * bytesPerPixel - 1] / 2);
+                    }
+                    for (int l = i + 1 + bytesPerPixel; l < pngHeader.Width * bytesPerPixel + 1 + i; l++)
+                    {
+                        filteredData[l] += (byte)((filteredData[l - bytesPerPixel] + filteredData[l - 1 - pngHeader.Width * bytesPerPixel]) / 2);
+                    }
+                }
+                if (filteredData[i] == 4)
+                {
+                    for (int l = i + 1; l < i + 1 + bytesPerPixel; l++)
+                    {
+                        byte a = 0;
+                        byte b = filteredData[l - (pngHeader.Width * bytesPerPixel) - 1];
+                        byte c = 0;
+                        int pa = Math.Abs(b);
+                        int pb = Math.Abs(a);
+                        int pc = Math.Abs(a + b);
+                        byte pr = pa <= pb && pa <= pc ? a : pb <= pc ? b : c;
+                        filteredData[l] += pr;
+                    }
+                    for (int l = i + 1 + bytesPerPixel; l < pngHeader.Width * bytesPerPixel + 1 + i; l++)
+                    {
+                        byte a = filteredData[l - bytesPerPixel];
+                        byte b = filteredData[l - (pngHeader.Width * bytesPerPixel) - 1];
+                        byte c = filteredData[l - (pngHeader.Width * bytesPerPixel) - bytesPerPixel - 1];
+                        int pa = Math.Abs(b - c);
+                        int pb = Math.Abs(a - c);
+                        int pc = Math.Abs(a + b - c - c);
+                        byte pr = pa <= pb && pa <= pc ? a : pb <= pc ? b : c;
+                        filteredData[l] += pr;
+                    }
+                }
+                i += pngHeader.Width * bytesPerPixel + 1;
+            }
+            return filteredData;
         }
 
         private PngHeader GetPngHeader(List<PngChunk> chunks)

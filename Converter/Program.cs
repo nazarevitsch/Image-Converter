@@ -1,7 +1,4 @@
-﻿using System;
-using Converter.Image;
-
-namespace Converter
+﻿namespace Converter
 {
     class Program
     {
@@ -12,12 +9,11 @@ namespace Converter
             // Console.WriteLine(dog1);
             // BmpImage dog2 = bmpReader.ReadImage(@"C:\Users\nazar\RiderProjects\\Converter\Converter\resources\dog2.bmp");
             // Console.WriteLine(dog2);
-
             PngReader pngReader = new PngReader();
-            Image.Image png = pngReader.ReadImage(@"C:\Users\nazar\RiderProjects\\Converter\Converter\resources\dog.png");
+            Image.Image png = pngReader.ReadImage(@"C:\Users\nazar\RiderProjects\\Converter\Converter\resources\Big.png");
             BmpWriter writer = new BmpWriter();
             writer.WriteImage(png, @"C:\Users\nazar\RiderProjects\\Converter\Converter\resources\dog2.bmp");
-            
+            // Console.WriteLine();
             // pngReader.ReadImage(@"C:\Users\nazar\RiderProjects\\Converter\Converter\resources\BigTest.png");
             // pngReader.ReadImage(@"C:\Users\nazar\RiderProjects\\Converter\Converter\resources\index.png");
             // pngReader.ReadImage(@"C:\Users\nazar\RiderProjects\\Converter\Converter\resources\ricardo.png");

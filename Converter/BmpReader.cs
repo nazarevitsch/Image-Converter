@@ -36,13 +36,12 @@ namespace Converter
                 pixels[i] = new Pixel[width];
                 for (int l = 0; l < width; l++)
                 {
-                    pixels[i][l] = new Pixel(array[rowStart + l * 4], 
+                    pixels[i][l] = new Pixel(array[rowStart + l * 4 + 2], 
                         array[rowStart + l * 4 + 1],
-                        array[rowStart + l * 4 + 2]);
+                        array[rowStart + l * 4]);
                 }
             }
             image.Pixels = pixels;
-            image.PrintPixels();
             return image;
         }
     }

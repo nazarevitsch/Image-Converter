@@ -10,32 +10,32 @@ namespace Converter
             // BmpReader bmpReader = new BmpReader();
             // Image.Image dog = bmpReader.ReadImage(@"C:\Users\nazar\RiderProjects\\Converter\Converter\resources\dog.bmp");
            
-            // PngReader pngReader = new PngReader();
-            // Image.Image dog = pngReader.ReadImage(@"C:\Users\nazar\RiderProjects\\Converter\Converter\resources\git.png");
+            PngReader pngReader = new PngReader();
+            Image.Image dog = pngReader.ReadImage(@"C:\Users\nazar\RiderProjects\\Converter\Converter\resources\dog.png");
+            
+            PngWriter pngWriter = new PngWriter();
+            pngWriter.WriteImage(dog, @"C:\Users\nazar\RiderProjects\\Converter\Converter\resources\Result.png");
+            
+            // byte[] array1 = File.ReadAllBytes(@"C:\Users\nazar\RiderProjects\\Converter\Converter\resources\dog.png");
+            // byte[] array2 = File.ReadAllBytes(@"C:\Users\nazar\RiderProjects\\Converter\Converter\resources\Result.png");
             //
-            // PngWriter pngWriter = new PngWriter();
-            // pngWriter.WriteImage(dog, @"C:\Users\nazar\RiderProjects\\Converter\Converter\resources\Result.png");
-            
-            byte[] array1 = File.ReadAllBytes(@"C:\Users\nazar\RiderProjects\\Converter\Converter\resources\dog.png");
-            byte[] array2 = File.ReadAllBytes(@"C:\Users\nazar\RiderProjects\\Converter\Converter\resources\Result.png");
-            
             // for (int i = 0; i < array1.Length; i++)
             // {
-            //     Console.WriteLine("I: " + i + ", O: " + array1[i] + ", C: " + array2[i] + ", TRUE: " + (array1[i] == array2[i]));
+            //     Console.WriteLine("I: " + i + ", CHAR:" + (char)array1[i] + ", O: " + array1[i] + ", C: " + array2[i] + ", TRUE: " + (array1[i] == array2[i]));
             // }
-            for (int i = 0; i < array1.Length; i++)
-            {
-                Console.WriteLine("I: " + i + ", O: " + array1[array1.Length - i - 1] + ", C: " + array2[array2.Length - i - 1] + ", TRUE: " + (array1[array1.Length - i - 1] == array2[array2.Length - i - 1]));
-            }
+            // for (int i = 0; i < array1.Length; i++)
+            // {
+            //     Console.WriteLine("I: " + i + ", O: " + array1[array1.Length - i - 1] + ", C: " + array2[array2.Length - i - 1] + ", TRUE: " + (array1[array1.Length - i - 1] == array2[array2.Length - i - 1]));
+            // }
             
             
             // PngReader pngReader = new PngReader();
-            // Image.Image dog = pngReader.ReadImage(@"C:\Users\nazar\RiderProjects\\Converter\Converter\resources\Result.png");
+            // Image.Image dog = pngReader.ReadImage(@"C:\Users\nazar\RiderProjects\\Converter\Converter\resources\dog.png");
             
             
             
             // BmpWriter writer = new BmpWriter();
-            // writer.WriteImage(dog, @"C:\Users\nazar\RiderProjects\\Converter\Converter\resources\Result.bmp");
+            // writer.WriteImage(dog, @"C:\Users\nazar\RiderProjects\\Converter\Converter\resources\Result2.bmp");
             
             // pngReader.ReadImage(@"C:\Users\nazar\RiderProjects\\Converter\Converter\resources\dog.png");
             // pngReader.ReadImage(@"C:\Users\nazar\RiderProjects\\Converter\Converter\resources\BigTest.png");

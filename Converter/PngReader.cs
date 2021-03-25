@@ -17,22 +17,19 @@ namespace Converter
 
             List<PngChunk> chunks = ReadChunks(array);
             PngHeader header = GetPngHeader(chunks);
-            Console.WriteLine(array.Length);
-            Console.WriteLine(header);
-            for (int i = 0; i < array.Length; i++)
-            {
-                Console.WriteLine("I: " + i + ", B: " + array[i] + ", C: " + (char) array[i]);
-                if (i > 50) break;
-                {
-                    
-                }
-            }
+            // Console.WriteLine(array.Length);
+            // Console.WriteLine(header);
+            // for (int i = 0; i < array.Length; i++)
+            // {
+            //     Console.WriteLine("I: " + i + ", B: " + array[i] + ", C: " + (char) array[i]);
+            //     // if (i > 50) break;
+            // }
 
             byte[] decompressedData = Decompressing(GetCompressedDataFromAllIdatChunks(chunks));
             byte[] unfilteredData = Unfiltering(decompressedData, header);
             
             Image.Image image = new Image.Image(header.Width, header.Height, GetPixelMatrix(unfilteredData, header));
-            image.PrintPixels();
+            // image.PrintPixels();
             return image;
         }
 

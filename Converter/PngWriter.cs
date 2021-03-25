@@ -145,7 +145,7 @@ namespace Converter
         {
             Console.WriteLine("Before Compressing: " + filteredData.Length);
             var output = new MemoryStream();
-            using(var zipStream = new GZipStream(output, CompressionMode.Compress))
+            using(var zipStream = new DeflateStream(output, CompressionLevel.Fastest))
             {
                 new MemoryStream(filteredData).CopyTo(zipStream);
             }

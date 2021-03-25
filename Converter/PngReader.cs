@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
-  using System.Runtime.Remoting.Messaging;
   using Converter.Image;
 
 
@@ -18,14 +17,22 @@ namespace Converter
 
             List<PngChunk> chunks = ReadChunks(array);
             PngHeader header = GetPngHeader(chunks);
-            
+            Console.WriteLine(array.Length);
             Console.WriteLine(header);
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.WriteLine("I: " + i + ", B: " + array[i] + ", C: " + (char) array[i]);
+                if (i > 50) break;
+                {
+                    
+                }
+            }
 
             byte[] decompressedData = Decompressing(GetCompressedDataFromAllIdatChunks(chunks));
             byte[] unfilteredData = Unfiltering(decompressedData, header);
             
             Image.Image image = new Image.Image(header.Width, header.Height, GetPixelMatrix(unfilteredData, header));
-            
+            image.PrintPixels();
             return image;
         }
 
@@ -42,7 +49,8 @@ namespace Converter
                     pixels[i][l] = pngHeader.ColorType == 2
                         ? new Pixel(unfilteredData[(starOfRow + 1) + (bytesPerPixel * l)],
                             unfilteredData[(starOfRow + 2) + (bytesPerPixel * l)],
-                            unfilteredData[(starOfRow + 3) + (bytesPerPixel * l)])
+                            unfilteredData[(starOfRow + 3) + (bytesPerPixel * l)],
+                            0)
                         : new Pixel(unfilteredData[(starOfRow + 1) + (bytesPerPixel * l)],
                             unfilteredData[(starOfRow + 2) + (bytesPerPixel * l)],
                             unfilteredData[(starOfRow + 3) + (bytesPerPixel * l)],
@@ -183,11 +191,13 @@ namespace Converter
 
         private byte[] Decompressing(byte[] compressedData)
         {
+            Console.WriteLine("Before Decompressing: " + compressedData.Length);
             var output = new MemoryStream();
             using(var zipStream = new GZipStream(new MemoryStream(compressedData), CompressionMode.Decompress))
             {
                 zipStream.CopyTo(output);
                 zipStream.Close();
+                Console.WriteLine("After Decompressing: " + output.Length);
                 return output.ToArray();
             }
         }

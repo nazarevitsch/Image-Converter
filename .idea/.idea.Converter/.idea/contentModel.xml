@@ -34,6 +34,7 @@
           </e>
         </e>
         <e p="PngReader.cs" t="Include" />
+        <e p="PngWriter.cs" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="resources" t="Include">
           <e p="BIg.png" t="Include" />
@@ -42,8 +43,8 @@
           <e p="dog.bmp" t="Include" />
           <e p="dog.gif" t="Include" />
           <e p="dog.png" t="Include" />
-          <e p="dog2.bmp" t="Include" />
           <e p="git.png" t="Include" />
+          <e p="Result.png" t="Include" />
           <e p="ricardo.png" t="Include" />
           <e p="test.bmp" t="Include" />
         </e>

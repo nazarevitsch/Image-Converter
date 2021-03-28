@@ -7,7 +7,7 @@ namespace Converter
 {
     public class BmpReader : IImageReader
     {
-        public BmpImage ReadImage(String fileName)
+        public Image.Image ReadImage(String fileName)
         {
             byte[] array = File.ReadAllBytes(fileName);
             
@@ -26,20 +26,22 @@ namespace Converter
             byte[] imageSizeBytes = {array[34], array[35], array[36], array[37]};
             int imageSize = BitConverter.ToInt32(imageSizeBytes, 0);
             
-            BmpImage image = new BmpImage();
+            Image.Image image = new Image.Image();
             image.Width = width;
             image.Height = height;
-            image.Pixels = array.Skip(14 + headerSize).Take(imageSize).ToArray();
-            
-            // Console.WriteLine("F.S.: " + fileSize);
-            // Console.WriteLine("H.S.: " + headerSize);
-            // Console.WriteLine("W.: " + width);
-            // Console.WriteLine("H.: " + height);
-            // Console.WriteLine("I.S.: " + imageSize);
-            // for (int i = 0; i < array.Length; i++)
-            // {
-            //     Console.WriteLine(i + ": " + array[i]);
-            // }
+            Pixel[][] pixels = new Pixel[height][];
+            for (int i = 0; i < height; i++)
+            {
+                int rowStart = 14 + headerSize + (image.Height - 1 - i) * width * 4;
+                pixels[i] = new Pixel[width];
+                for (int l = 0; l < width; l++)
+                {
+                    pixels[i][l] = new Pixel(array[rowStart + l * 4 + 2], 
+                        array[rowStart + l * 4 + 1],
+                        array[rowStart + l * 4]);
+                }
+            }
+            image.Pixels = pixels;
             return image;
         }
     }

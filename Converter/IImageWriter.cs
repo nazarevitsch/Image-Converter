@@ -1,7 +1,9 @@
-﻿namespace Converter
+﻿using System;
+
+namespace Converter
 {
-    public interface IImageWriter : IImageConverter
+    public interface IImageWriter
     {
-        
+        void WriteImage(Image.Image image, String path);
     }
 }

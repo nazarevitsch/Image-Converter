@@ -10,14 +10,16 @@ namespace Convertor.Compress
     public class GIfLwz
     {
         public Dictionary<int, Pixel> Codes { get; private set; }
-        
-        public Dictionary<int, List<int>> DecodedDictionary = new Dictionary<int, List<int>>(10);
-        public int ClearPixel { get; } = -1;
 
+        public Dictionary<int, List<int>> DecodedDictionary;
+        public int ClearPixel { get; } = -1;
         public int EndPixel { get; } = -2;
+
+        public List<Pixel> SavedPixels { get; } = new List<Pixel>(100);
         
         private void InitTable <T> (T colors) where T : IList<Pixel>
         {
+            DecodedDictionary = new Dictionary<int, List<int>>(10);
             Codes = new Dictionary<int, Pixel>(10);
             for (var color = 0; color < colors.Count; color++)
             {
@@ -33,7 +35,7 @@ namespace Convertor.Compress
         public List<Pixel> Decode<T>(byte[] bytes, T colors, int minCodeSize) where T : IList<Pixel>
         {
             InitTable(colors);
-            
+            int initSize = minCodeSize;
             using (var writer = new BitReader(bytes.Reverse().ToArray()))
             {
                 var bits = writer.ReadAll();
@@ -48,23 +50,30 @@ namespace Convertor.Compress
                 
                 while (!DecodedDictionary.ContainsKey(data[0]) || DecodedDictionary[data[0]][0] != EndPixel)
                 {
-                    if (DecodedDictionary[lastDictionaryFindIndex][0] != ClearPixel)
+                    if (data[0] < colors.Count + 2 && DecodedDictionary[data[0]][0] == ClearPixel)
+                    {   
+                        Console.WriteLine(data[0]);
+                        SavePixels(indexHistory);
+                        indexHistory.Clear();
+                        InitTable(colors);
+                        minCodeSize = initSize; //HARDCODE
+                        dictionaryLastKeyIndex = DecodedDictionary.Count;
+                    } 
+                    else if (lastDictionaryFindIndex > colors.Count + 1 || DecodedDictionary[lastDictionaryFindIndex][0] != ClearPixel)
                     {
                         var lastFindIndexVal = DecodedDictionary[lastDictionaryFindIndex];
                         if (!DecodedDictionary.ContainsKey(data[0]))
                         {
-                            DecodedDictionary[data[0]] = new List<int>{ lastFindIndexVal[0] };
-                            DecodedDictionary[data[0]].AddRange(DecodedDictionary[data[0]]);
+                            DecodedDictionary[data[0]] = new List<int>(lastFindIndexVal);
+                            DecodedDictionary[data[0]].Add(DecodedDictionary[data[0]][0]);
                         }
                         else
                         {
-                            var newList = new List<int>();
-                            newList.AddRange(lastFindIndexVal);
-                            newList.Add(DecodedDictionary[data[0]][0]);
+                            var newList = new List<int>(lastFindIndexVal) {DecodedDictionary[data[0]][0]};
                             DecodedDictionary[dictionaryLastKeyIndex] = newList;
                         }
                         dictionaryLastKeyIndex++;
-                        if ((dictionaryLastKeyIndex & (dictionaryLastKeyIndex - 1)) == 0 && minCodeSize != 12)
+                        if ((dictionaryLastKeyIndex & (dictionaryLastKeyIndex - 1)) == 0 && minCodeSize < 12)
                         {
                             minCodeSize++;
                         }
@@ -77,28 +86,32 @@ namespace Convertor.Compress
                     indexHistory.Add(data[0]);
                 }
 
-                var pixels = new List<Pixel>(10);
-                foreach (var index in indexHistory)
-                {
-                    if (DecodedDictionary[index][0] == EndPixel || DecodedDictionary[index][0] == ClearPixel) continue;
-
-                    foreach (var colorIndex in DecodedDictionary[index])
-                    {
-                        if (colorIndex < 0) continue;
-                        pixels.Add(Codes[colorIndex]);
-                    }
-                }
-                return pixels;
+                SavePixels(indexHistory);
+                return SavedPixels;
             }
         }
 
         public void Encode<T>(int[] indexes, T colors, int minCodeSize) where T : IList<Pixel>
         {
             InitTable(colors);
-            foreach (var index in indexes)
+            // foreach (var index in indexes)
+            // {
+            //     var firstNotSecond = DecodedDictionary[index].Except(list2).ToList();
+            //     var secondNotFirst = list2.Except(list1).ToList();
+            // }
+        }
+
+        private void SavePixels(List<int> indexHistory)
+        {
+            foreach (var index in indexHistory)
             {
-                var firstNotSecond = DecodedDictionary[index].Except(list2).ToList();
-                var secondNotFirst = list2.Except(list1).ToList();
+                if (DecodedDictionary[index][0] == EndPixel || DecodedDictionary[index][0] == ClearPixel) continue;
+
+                foreach (var colorIndex in DecodedDictionary[index])
+                {
+                    if (colorIndex < 0) continue;
+                    SavedPixels.Add(Codes[colorIndex]);
+                }
             }
         }
     }

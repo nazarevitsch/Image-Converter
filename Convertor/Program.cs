@@ -13,7 +13,7 @@ namespace Convertor
             var ppmWriter = new PpmWriter();
             var gifToPpmConvertor = new GifToPpmConverter();
             var convertor = new Converter.Converter();
-            var gif = new Gif("./images/banana1.gif");
+            var gif = new Gif("./images/tree.gif");
             
             var gifConvertedToPpm = convertor.Convert(gif, gifToPpmConvertor);
             ppmWriter.Write(gifConvertedToPpm);

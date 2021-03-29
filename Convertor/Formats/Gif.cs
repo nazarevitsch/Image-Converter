@@ -144,15 +144,15 @@ namespace Converter
                 var interlacedFlag = (localPaletteByte & 0b01000000) >> 6;
                 var localPaletteSortedFlag = (localPaletteByte & 0b00100000) >> 5;
                 var localPaletteSize = localPaletteByte & 0b00000111;
-                var minLzwCode = Convert.ToInt32(fileData[dataBlockIndex + 10]) + 1;
-                var imageCompressedSize = Convert.ToInt32(fileData[dataBlockIndex + 11]);
+                var minLzwCode = Convert.ToByte(fileData[dataBlockIndex + 10]) + 1;
+                var imageCompressedSize = Convert.ToByte(fileData[dataBlockIndex + 11]);
                 var compressedImage = fileData.Skip(dataBlockIndex + 12).Take(imageCompressedSize).ToList();
                 dataBlockIndex += 12 + imageCompressedSize;
                 while (fileData[dataBlockIndex] != 0x00)
                 {
-                    imageCompressedSize = Convert.ToInt32(fileData[dataBlockIndex]);
-                    compressedImage.AddRange(fileData.Skip(dataBlockIndex).Take(imageCompressedSize).ToList());
-                    dataBlockIndex += imageCompressedSize;
+                    imageCompressedSize = Convert.ToByte(fileData[dataBlockIndex]);
+                    compressedImage.AddRange(fileData.Skip(dataBlockIndex + 1).Take(imageCompressedSize).ToList());
+                    dataBlockIndex += imageCompressedSize + 1;
                 }
                 var decoder = new GIfLwz();
                 Pixels = decoder.Decode(compressedImage.ToArray(), Pixels, minLzwCode).ToArray();

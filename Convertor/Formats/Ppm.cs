@@ -19,7 +19,7 @@ namespace Converter
         {
             { "MagicNumber", "" },
             { "Size", "" },
-            { "MaxValue", "" },
+            { "MaxValue", "" }
         };
         public byte[] Bytes { get; set; }
 

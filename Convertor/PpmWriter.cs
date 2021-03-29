@@ -13,7 +13,7 @@ namespace Converter
             {
                 sb.Append(keyValuePair.Value);
             }
-
+            
             var bytes = new byte[format.Pixels.Length * 3];
             for (int pixel = 0, bytePos=0; pixel < format.Pixels.Length; pixel++, bytePos+=3)
             {

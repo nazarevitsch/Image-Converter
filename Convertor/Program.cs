@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Converter;
 using LZW;
 
@@ -10,21 +11,12 @@ namespace Convertor
         static void Main(string[] args)
         {
             var ppmWriter = new PpmWriter();
-            var bmpWriter = new BmpWriter();
-            var bmpToPpmConverter = new BmpToPpmConverter();
-            var ppmToBmpConvertor = new PpmToBmpConvertor();
+            var gifToPpmConvertor = new GifToPpmConverter();
             var convertor = new Converter.Converter();
-            var ppm = new Ppm("./images/sample.ppm");
-            var bmp = new Bmp("./images/BigTest.bmp");
-            var boxes = new Ppm("./images/boxes_1.ppm");
-            var gif = new Gif("./images/habr.gif");
+            var gif = new Gif("./images/banana1.gif");
             
-            bmpWriter.Write(bmp, "./BigTest.bmp");
-            var newPpm = convertor.Convert(bmp, bmpToPpmConverter);
-            var bmpBoxes = convertor.Convert(boxes, ppmToBmpConvertor);
-            ppmWriter.Write(newPpm);
-            bmpWriter.Write(bmp, "./BigTest.ppm");
-            bmpWriter.Write(bmpBoxes, "./boxes.bmp");
+            var gifConvertedToPpm = convertor.Convert(gif, gifToPpmConvertor);
+            ppmWriter.Write(gifConvertedToPpm);
         }
     }
 }

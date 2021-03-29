@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using Converter;
+using Convertor.Compress;
 using LZW;
 
 
@@ -46,12 +47,11 @@ namespace Converter
 {
     public class Gif : IImageFormat
     {
-        public Dictionary<int, string> ColorTable { get; set; } = new();
         public Dictionary<string, string> Headers { get; set; } = new();
         public byte[] Bytes { get; set; }
         public Pixel[] Pixels { get; set; }
 
-        private int _paletteStartIndex = 13;
+        private const int PaletteStartIndex = 13;
 
         private List<ImageControlExtensionBlock> _blocks = new();
         public Gif(string path)
@@ -79,7 +79,7 @@ namespace Converter
 
             Pixels = new Pixel[(int) paletteSize / 3];
             
-            for (int paletteIndex = _paletteStartIndex, row = 0; paletteIndex < _paletteStartIndex + paletteSize; paletteIndex+=3, row++)
+            for (int paletteIndex = PaletteStartIndex, row = 0; paletteIndex < PaletteStartIndex + paletteSize; paletteIndex+=3, row++)
             {
                 Pixels[row] = new Pixel
                 {
@@ -89,7 +89,7 @@ namespace Converter
                 };
                 
             }
-            var dataBlockIndex = _paletteStartIndex + (int) paletteSize;
+            var dataBlockIndex = PaletteStartIndex + (int) paletteSize;
             var dataBlockType = fileData[dataBlockIndex];
             var dataBlockExtensionType = fileData[dataBlockIndex + 1];
             var dataBlockSize = Convert.ToInt32(fileData[dataBlockIndex + 2]);
@@ -134,6 +134,7 @@ namespace Converter
 
             if (dataBlockType == BlockCodes.ImageBlock)
             {
+                
                 var logicalRow = BitConverter.ToInt16(fileData, dataBlockIndex + 1);
                 var logicalCol = BitConverter.ToInt16(fileData, dataBlockIndex + 3);
                 var width = BitConverter.ToInt16(fileData, dataBlockIndex + 5);
@@ -143,11 +144,18 @@ namespace Converter
                 var interlacedFlag = (localPaletteByte & 0b01000000) >> 6;
                 var localPaletteSortedFlag = (localPaletteByte & 0b00100000) >> 5;
                 var localPaletteSize = localPaletteByte & 0b00000111;
-                var minLzwCode = Convert.ToInt32(fileData[dataBlockIndex + 10]);
+                var minLzwCode = Convert.ToInt32(fileData[dataBlockIndex + 10]) + 1;
                 var imageCompressedSize = Convert.ToInt32(fileData[dataBlockIndex + 11]);
-                var compressedImage = fileData.Skip(dataBlockIndex + 12).Take(imageCompressedSize).ToArray();
-                var decoder = new LZWDecoder();
-                var decodedString = decoder.DecodeFromCodes(compressedImage);
+                var compressedImage = fileData.Skip(dataBlockIndex + 12).Take(imageCompressedSize).ToList();
+                dataBlockIndex += 12 + imageCompressedSize;
+                while (fileData[dataBlockIndex] != 0x00)
+                {
+                    imageCompressedSize = Convert.ToInt32(fileData[dataBlockIndex]);
+                    compressedImage.AddRange(fileData.Skip(dataBlockIndex).Take(imageCompressedSize).ToList());
+                    dataBlockIndex += imageCompressedSize;
+                }
+                var decoder = new GIfLwz();
+                Pixels = decoder.Decode(compressedImage.ToArray(), Pixels, minLzwCode).ToArray();
             }
         }
 

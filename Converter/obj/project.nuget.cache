@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "pW8rBqsL8Bv4E1kGoCHRdlGVm94/bG9YNeHbchtTCseQtfy+plDW3juNp06Sx1hKa/3jDh/vPUwSW3csIk6YZA==",
+  "dgSpecHash": "FSg0GT8IlYUFyDc+zyyHzWdLOl6yXUggiIo/9cOD/qUzQiKMp1zhwWqYSQ3xuT6p7+mQAAfUnhqqlnre9NzzPg==",
   "success": true,
   "projectFilePath": "C:\\Users\\nazar\\RiderProjects\\Converter\\Converter\\Converter.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\nazar\\.nuget\\packages\\pngcompressor\\1.0.5\\pngcompressor.1.0.5.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,12 +1,48 @@
 {
   "version": 3,
   "targets": {
-    ".NETFramework,Version=v4.8": {},
-    ".NETFramework,Version=v4.8/win7-x86": {}
+    ".NETFramework,Version=v4.8": {
+      "PNGCompressor/1.0.5": {
+        "type": "package",
+        "compile": {
+          "lib/net45/PNGCompressor.dll": {}
+        },
+        "runtime": {
+          "lib/net45/PNGCompressor.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.8/win7-x86": {
+      "PNGCompressor/1.0.5": {
+        "type": "package",
+        "compile": {
+          "lib/net45/PNGCompressor.dll": {}
+        },
+        "runtime": {
+          "lib/net45/PNGCompressor.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "PNGCompressor/1.0.5": {
+      "sha512": "mRLDsINQH0jfe7W/Jey5t6h0tD3t3W37t0tGrVnoXFi5hlDnO27guGgJOAnErUlcu/LJbwEPNvwe1NbZIqbKhQ==",
+      "type": "package",
+      "path": "pngcompressor/1.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/PNGCompressor.dll",
+        "lib/net45/PNGCompressor.xml",
+        "pngcompressor.1.0.5.nupkg.sha512",
+        "pngcompressor.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETFramework,Version=v4.8": []
+    ".NETFramework,Version=v4.8": [
+      "PNGCompressor >= 1.0.5"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\nazar\\.nuget\\packages\\": {}
@@ -44,6 +80,12 @@
     "frameworks": {
       "net48": {
         "targetAlias": "net48",
+        "dependencies": {
+          "PNGCompressor": {
+            "target": "Package",
+            "version": "[1.0.5, )"
+          }
+        },
         "runtimeIdentifierGraphPath": "C:\\Users\\nazar\\.dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     },

@@ -1,4 +1,4 @@
-﻿namespace Converter
+﻿namespace Convertor
 {
     public record Pixel 
     {

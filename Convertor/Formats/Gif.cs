@@ -4,7 +4,9 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using Converter;
+using Convertor;
 using Convertor.Compress;
+using Convertor.Formats;
 using LZW;
 
 
@@ -50,6 +52,9 @@ namespace Converter
         public Dictionary<string, string> Headers { get; set; } = new();
         public byte[] Bytes { get; set; }
         public Pixel[] Pixels { get; set; }
+        public int Width { get; set; }
+        public int Height { get; set; }
+        public Pixel[][] _Pixels { get; set; }
 
         private const int PaletteStartIndex = 13;
 
@@ -71,7 +76,10 @@ namespace Converter
             var isSortedColors = (globalColorsDataByte & 0b00001000) >> 3;
             var colorDepth = Math.Pow(2.0, ((globalColorsDataByte & 0b01110000) >> 4) + 1.0);
             var paletteSize = 3 * Math.Pow(2.0, (globalColorsDataByte & 0b00000111) + 1.0);
-            
+            if (isGlobalPaletteExist == 0)
+            {
+                throw new Exception("Not supported");
+            }
             Headers["isGlobalPaletteExist"] = "" + isGlobalPaletteExist;
             Headers["ColorDepth"] = colorDepth + "";
             Headers["SortedColors"] = isSortedColors + "";
@@ -96,10 +104,8 @@ namespace Converter
             
             while (dataBlockType == BlockCodes.ExtensionBlock)
             {
-                
                 if (dataBlockExtensionType == ExtensionCodes.ProgramExtension || dataBlockExtensionType == ExtensionCodes.CommentExtension)
                 {
-
                     dataBlockIndex = SkipBlock(fileData, dataBlockIndex);
                     dataBlockType = fileData[dataBlockIndex];
                     dataBlockExtensionType = fileData[dataBlockIndex + 1];
@@ -154,7 +160,7 @@ namespace Converter
                     compressedImage.AddRange(fileData.Skip(dataBlockIndex + 1).Take(imageCompressedSize).ToList());
                     dataBlockIndex += imageCompressedSize + 1;
                 }
-                var decoder = new GIfLwz();
+                var decoder = new GifLwz();
                 Pixels = decoder.Decode(compressedImage.ToArray(), Pixels, minLzwCode).ToArray();
             }
         }
@@ -168,6 +174,18 @@ namespace Converter
             }
 
             return startIndex + 1;
+        }
+
+        public static List<Pixel> GetUniqueColors<T> (T colors) where T : IList<Pixel>
+        {
+            var uniqueColors = new Dictionary<Pixel, byte>();
+
+            foreach (var color in colors.Where(color => !uniqueColors.ContainsKey(color)))
+            {
+                uniqueColors[color] = 1;
+            }
+
+            return uniqueColors.Keys.ToList();
         }
     }
 }

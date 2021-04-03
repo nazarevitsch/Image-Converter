@@ -1,7 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 
-namespace Converter
+namespace Convertor.Formats
 {
     public interface IImageFormat
     {
@@ -10,5 +9,11 @@ namespace Converter
         public byte[] Bytes { get; set; }
 
         public Pixel[] Pixels { get; set; }
+        
+        public int Width { get; set; }
+
+        public int Height { get; set; }
+
+        public Pixel[][] _Pixels { get; set; }
     }
 }

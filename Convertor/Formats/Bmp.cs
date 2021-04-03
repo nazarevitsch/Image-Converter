@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Convertor;
+using Convertor.Formats;
 
 namespace Converter
 {
@@ -10,6 +12,12 @@ namespace Converter
         public Dictionary<string, string> Headers { get; set; } = new();
         public byte[] Bytes { get; set; }
         public Pixel[] Pixels { get; set; }
+        
+        public int Width { get; set; }
+        
+        public int Height { get; set; }
+        
+        public Pixel[][] _Pixels { get; set; }
 
         public Bmp(string path)
         {

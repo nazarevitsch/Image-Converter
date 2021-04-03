@@ -1,3 +1,5 @@
+using Convertor.Formats;
+
 namespace Converter
 {
     public interface IImageConvertor

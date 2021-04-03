@@ -9,30 +9,66 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20260254-d194-479e-93bd-3b454d832029" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Convertor/Compress/GIfLwz.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Convertor/Compress/SharpLZW/ANSI.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Convertor/Compress/SharpLZW/BitReader.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Convertor/Compress/SharpLZW/ExtensionMethods.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Convertor/Compress/SharpLZW/LZWDecoder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Convertor/Compress/SharpLZW/LZWEncoder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Convertor/Formats/Gif.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Convertor/images/dog.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Convertor/BmpReader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Convertor/Compress/GifLwz.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Convertor/Formats/bmp/BmpImage.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Convertor/Formats/png/Png.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Convertor/Formats/png/PngChunk.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Convertor/Formats/png/PngChunkType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Convertor/Formats/png/PngHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Convertor/GifWriter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Convertor/PngReader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Convertor/PngWriter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Convertor/images/Big.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Convertor/images/bob.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Convertor/images/circle2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Convertor/images/dog.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Convertor/images/giphy.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Convertor/images/heart.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Convertor/images/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Convertor/images/man2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Convertor/images/road.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Convertor/images/test.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Converter/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Converter/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Converter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Converter/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Converter/BmpWriter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Converter/BmpWriter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Converter/Image/Image.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Converter/Image/Image.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Converter/Image/Pixel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Converter/Image/Pixel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Converter/PngReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Converter/PngReader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Converter/PngWriter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Converter/PngWriter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Converter/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Converter/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Converter/bin/Debug/net48/Converter.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Converter/bin/Debug/net48/Converter.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Converter/bin/Debug/net48/Converter.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Converter/bin/Debug/net48/Converter.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Converter/bin/Debug/net48/PNGCompressor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Converter/bin/Debug/net48/PNGCompressor.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Converter/obj/Converter.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Converter/obj/Converter.csproj.nuget.dgspec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Converter/obj/Converter.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Converter/obj/Converter.csproj.nuget.g.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Converter/obj/Converter.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/Converter/obj/Converter.csproj.nuget.g.targets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Converter/obj/Debug/net48/Converter.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Converter/obj/Debug/net48/Converter.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Converter/obj/Debug/net48/Converter.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Converter/obj/Debug/net48/Converter.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Converter/obj/Debug/net48/Converter.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Converter/obj/Debug/net48/Converter.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Converter/obj/Debug/net48/Converter.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Converter/obj/Debug/net48/Converter.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Converter/obj/Debug/net48/Converter.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Converter/obj/Debug/net48/Converter.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Converter/obj/Debug/net48/Converter.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Converter/obj/Debug/net48/Converter.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Converter/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Converter/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Converter/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Converter/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Converter/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Converter/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Converter/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Converter/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Convertor/BigTest.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Convertor/BigTest.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Convertor/Convertor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/Convertor.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/BmpWriter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/BmpWriter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/Compress/GIfLwz.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/Converter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/Converter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/Convertors/BmpToPpmConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/Convertors/BmpToPpmConverter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/Convertors/GifToPpmConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/Convertors/GifToPpmConverter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/Convertors/IImageConvertor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/Convertors/IImageConvertor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/Convertors/PpmToBmpConvertor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/Convertors/PpmToBmpConvertor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/Formats/Bmp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/Formats/Bmp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/Formats/Bmp_old.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/Formats/Gif.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/Formats/Gif.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/Formats/IFormatWriter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/Formats/IFormatWriter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/Formats/IImageFormat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/Formats/IImageFormat.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/Formats/Ppm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/Formats/ppm/Ppm.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Convertor/Pixel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/Pixel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Convertor/PpmToBmpConvertor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/PpmToBmpConvertor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Convertor/PpmWriter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/PpmWriter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Convertor/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Convertor/bin/Debug/net5.0/Convertor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/bin/Debug/net5.0/Convertor.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Convertor/bin/Debug/net5.0/Convertor.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Convertor/bin/Debug/net5.0/Convertor.pdb" afterDir="false" />
@@ -69,28 +105,61 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/nazarevitsch/Image-Converter" />
+      </set>
+    </option>
+  </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/70AA7F05-5E5E-4FEE-A687-60D7E8D62395/29D/CastHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/70AA7F05-5E5E-4FEE-A687-60D7E8D62395/3F/String.Manipulation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/39E023EE-8F10-461C-AD7A-1B3F66CECE34/92/931f8c30/LZWDecoder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/70AA7F05-5E5E-4FEE-A687-60D7E8D62395/DE/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/70AA7F05-5E5E-4FEE-A687-60D7E8D62395/3FA/Dictionary.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/70AA7F05-5E5E-4FEE-A687-60D7E8D62395/67/BitConverter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/70AA7F05-5E5E-4FEE-A687-60D7E8D62395/3FA/Dictionary.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/70AA7F05-5E5E-4FEE-A687-60D7E8D62395/2/Interop.IOErrors.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/39E023EE-8F10-461C-AD7A-1B3F66CECE34/f6/289ce436/ANSI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/70AA7F05-5E5E-4FEE-A687-60D7E8D62395/67/BitConverter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/70AA7F05-5E5E-4FEE-A687-60D7E8D62395/B3/Number.Parsing.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/976015B6-A9F5-40EE-AAC6-41382C02A8FB/3/BitArray.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/68F3F466-147D-47AB-B660-3D35EF5D6EC2/12/Inflater.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Converter/Pixel.cs" />
-      <option value="$PROJECT_DIR$/Convertor/BmpWriter.cs" />
-      <option value="$PROJECT_DIR$/Convertor/Pixel.cs" />
       <option value="$PROJECT_DIR$/Convertor/PpmToBmpConvertor.cs" />
       <option value="$PROJECT_DIR$/Convertor/Compress/SharpLZW/TestLZW/Program.cs" />
       <option value="$PROJECT_DIR$/Convertor/Compress/SharpLZW/LZW/ExtensionMethods.cs" />
       <option value="$PROJECT_DIR$/Convertor/Compress/ANSI.cs" />
       <option value="$PROJECT_DIR$/Convertor/Compress/LZWDecoder.cs" />
-      <option value="$PROJECT_DIR$/Convertor/Formats/Gif.cs" />
       <option value="$PROJECT_DIR$/Convertor/Compress/SharpLZW/LZWDecoder.cs" />
-      <option value="$PROJECT_DIR$/Convertor/Program.cs" />
+      <option value="$PROJECT_DIR$/Convertor/GifToPpmConverter.cs" />
+      <option value="$PROJECT_DIR$/Convertor/PpmWriter.cs" />
       <option value="$PROJECT_DIR$/Convertor/Compress/GIfLwz.cs" />
+      <option value="$PROJECT_DIR$/Convertor/GifWriter.cs" />
+      <option value="$PROJECT_DIR$/Convertor/Compress/GifLwz.cs" />
+      <option value="$PROJECT_DIR$/Converter/Image/Image.cs" />
+      <option value="$PROJECT_DIR$/Convertor/Formats/Ppm.cs" />
+      <option value="$PROJECT_DIR$/Convertor/Formats/Gif.cs" />
+      <option value="$PROJECT_DIR$/Convertor/Formats/Bmp.cs" />
+      <option value="$PROJECT_DIR$/Converter/Image/Pixel.cs" />
+      <option value="$PROJECT_DIR$/Convertor/Formats/png/PngHeader.cs" />
+      <option value="$PROJECT_DIR$/Convertor/Formats/png/PngChunkType.cs" />
+      <option value="$PROJECT_DIR$/Convertor/Formats/png/PngChunk.cs" />
+      <option value="$PROJECT_DIR$/Convertor/Formats/bmp/BmpImage.cs" />
+      <option value="$PROJECT_DIR$/Convertor/Pixel.cs" />
+      <option value="$PROJECT_DIR$/Convertor/Formats/IImageFormat.cs" />
+      <option value="$PROJECT_DIR$/Convertor/BmpReader.cs" />
+      <option value="$PROJECT_DIR$/Convertor/BmpWriter.cs" />
+      <option value="$PROJECT_DIR$/Convertor/PngWriter.cs" />
+      <option value="$PROJECT_DIR$/Convertor/Formats/png/Png.cs" />
+      <option value="$PROJECT_DIR$/Convertor/PngReader.cs" />
+      <option value="$PROJECT_DIR$/Convertor/Program.cs" />
+      <option value="$PROJECT_DIR$/Converter/Program.cs" />
+      <option value="$PROJECT_DIR$/Converter/PngReader.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1pfGiUcaimG80yaiuXPWdZN3ut2" />
@@ -99,7 +168,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.35064936" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.3505747" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -167,6 +236,10 @@
       <workItem from="1615839343263" duration="12847000" />
       <workItem from="1615923076622" duration="490000" />
       <workItem from="1615930930642" duration="4550000" />
+      <workItem from="1617037600801" duration="6975000" />
+      <workItem from="1617130173492" duration="30131000" />
+      <workItem from="1617291075251" duration="29982000" />
+      <workItem from="1617389541394" duration="30984000" />
     </task>
     <servers />
   </component>
@@ -222,54 +295,131 @@
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Convertor/Compress/SharpLZW/LZWDecoder.cs</url>
           <line>43</line>
-          <properties documentPath="$PROJECT_DIR$/Convertor/Compress/LZWDecoder.cs" initialLine="43" containingFunctionPresentation="method 'DecodeFromCodes'">
-            <startOffsets>
-              <option value="1365" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1387" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="$PROJECT_DIR$/Convertor/Compress/LZWDecoder.cs" initialLine="43" containingFunctionPresentation="method 'DecodeFromCodes'" />
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Convertor/Compress/SharpLZW/LZWDecoder.cs</url>
           <line>87</line>
-          <properties documentPath="$PROJECT_DIR$/Convertor/Compress/LZWDecoder.cs" initialLine="87" containingFunctionPresentation="method 'Decode'">
-            <startOffsets>
-              <option value="2647" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2661" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="$PROJECT_DIR$/Convertor/Compress/LZWDecoder.cs" initialLine="87" containingFunctionPresentation="method 'Decode'" />
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Convertor/Formats/Gif.cs</url>
-          <line>91</line>
-          <properties documentPath="$PROJECT_DIR$/Convertor/Formats/Gif.cs" initialLine="88" containingFunctionPresentation="method 'ReadData'">
+          <url>file://$PROJECT_DIR$/Convertor/Compress/GifLwz.cs</url>
+          <line>175</line>
+          <properties documentPath="$PROJECT_DIR$/Convertor/Compress/GifLwz.cs" initialLine="173" containingFunctionPresentation="method 'Encode'">
             <startOffsets>
-              <option value="2985" />
+              <option value="7342" />
             </startOffsets>
             <endOffsets>
-              <option value="3045" />
+              <option value="7389" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="24" />
+          <option name="timeStamp" value="248" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Convertor/Formats/Gif.cs</url>
-          <line>149</line>
-          <properties documentPath="$PROJECT_DIR$/Convertor/Formats/Gif.cs" initialLine="149" containingFunctionPresentation="method 'ReadData'">
+          <url>file://$PROJECT_DIR$/Convertor/GifWriter.cs</url>
+          <line>69</line>
+          <properties documentPath="$PROJECT_DIR$/Convertor/GifWriter.cs" initialLine="68" containingFunctionPresentation="method 'Write'">
             <startOffsets>
-              <option value="6276" />
+              <option value="2758" />
             </startOffsets>
             <endOffsets>
-              <option value="6337" />
+              <option value="2779" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="25" />
+          <option name="timeStamp" value="255" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Convertor/Program.cs</url>
+          <line>34</line>
+          <properties documentPath="$PROJECT_DIR$/Convertor/Program.cs" initialLine="28" containingFunctionPresentation="method 'Main'">
+            <startOffsets>
+              <option value="1231" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1297" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="261" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Convertor/GifWriter.cs</url>
+          <line>39</line>
+          <properties documentPath="$PROJECT_DIR$/Convertor/GifWriter.cs" initialLine="38" containingFunctionPresentation="method 'Write'">
+            <startOffsets>
+              <option value="1620" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1698" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="269" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Convertor/Compress/GifLwz.cs</url>
+          <line>106</line>
+          <properties documentPath="$PROJECT_DIR$/Convertor/Compress/GifLwz.cs" initialLine="106" containingFunctionPresentation="method 'Encode'">
+            <startOffsets>
+              <option value="4496" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4533" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="270" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Convertor/GifWriter.cs</url>
+          <line>29</line>
+          <properties documentPath="$PROJECT_DIR$/Convertor/GifWriter.cs" initialLine="28" containingFunctionPresentation="method 'Write'">
+            <startOffsets>
+              <option value="1110" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1181" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="273" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Convertor/Compress/GifLwz.cs</url>
+          <line>57</line>
+          <properties documentPath="$PROJECT_DIR$/Convertor/Compress/GifLwz.cs" initialLine="57" containingFunctionPresentation="method 'Decode'">
+            <startOffsets>
+              <option value="2064" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2111" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="275" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Convertor/Compress/GifLwz.cs</url>
+          <line>125</line>
+          <properties documentPath="$PROJECT_DIR$/Convertor/Compress/GifLwz.cs" initialLine="125" containingFunctionPresentation="method 'Encode'">
+            <startOffsets>
+              <option value="5384" />
+            </startOffsets>
+            <endOffsets>
+              <option value="5454" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="276" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Convertor/Compress/GifLwz.cs</url>
+          <line>97</line>
+          <properties documentPath="$PROJECT_DIR$/Convertor/Compress/GifLwz.cs" initialLine="97" containingFunctionPresentation="method 'Decode'">
+            <startOffsets>
+              <option value="4168" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4187" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="278" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -4,46 +4,30 @@ namespace Converter.Image
 {
     public class Image
     {
-        private int _Width;
-        private int _Height;
-        private Pixel[][] _Pixels;
-
         public Image()
         {
         }
 
         public Image(int width, int height, Pixel[][] pixels)
         {
-            _Width = width;
-            _Height = height;
-            _Pixels = pixels;
+            Width = width;
+            Height = height;
+            Pixels = pixels;
         }
 
-        public int Width
-        {
-            get => _Width;
-            set => _Width = value;
-        }
+        public int Width { get; set; }
 
-        public int Height
-        {
-            get => _Height;
-            set => _Height = value;
-        }
+        public int Height { get; set; }
 
-        public Pixel[][] Pixels
-        {
-            get => _Pixels;
-            set => _Pixels = value;
-        }
+        public Pixel[][] Pixels { get; set; }
 
         public void PrintPixels()
         {
-            for (int i = 0; i < _Pixels.Length; i++)
+            for (int i = 0; i < Pixels.Length; i++)
             {
-                for (int l = 0; l < _Pixels.Length; l++)
+                for (int l = 0; l < Pixels.Length; l++)
                 {
-                    Console.Write(_Pixels[i][l] + ",     ");
+                    Console.Write(Pixels[i][l] + ",     ");
                 }
                 Console.WriteLine();
             }
@@ -51,7 +35,7 @@ namespace Converter.Image
 
         public override string ToString()
         {
-            return "Image: {Width: " + _Width + ", Height: " + _Height + "}";
+            return "Image: {Width: " + Width + ", Height: " + Height + "}";
         }
     }
 }

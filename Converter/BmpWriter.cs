@@ -53,9 +53,9 @@ namespace Converter
                 int reversedI = image.Height - 1 - i;
                 for (int l = 0; l < image.Pixels[i].Length; l++)
                 {
-                    imageBytes[i * image.Width * 4 + HeaderSize + HeaderInfoSize + l * 4] = image.Pixels[reversedI][l].B;
-                    imageBytes[i * image.Width * 4 + HeaderSize + HeaderInfoSize + l * 4 + 1] = image.Pixels[reversedI][l].G;
-                    imageBytes[i * image.Width * 4 + HeaderSize + HeaderInfoSize + l * 4 + 2] = image.Pixels[reversedI][l].R;
+                    imageBytes[i * image.Width * 4 + HeaderSize + HeaderInfoSize + l * 4] = image.Pixels[reversedI][l].Blue;
+                    imageBytes[i * image.Width * 4 + HeaderSize + HeaderInfoSize + l * 4 + 1] = image.Pixels[reversedI][l].Green;
+                    imageBytes[i * image.Width * 4 + HeaderSize + HeaderInfoSize + l * 4 + 2] = image.Pixels[reversedI][l].Red;
                     imageBytes[i * image.Width * 4 + HeaderSize + HeaderInfoSize + l * 4 + 3] = 0;
                 } 
             }

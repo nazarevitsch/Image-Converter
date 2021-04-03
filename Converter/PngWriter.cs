@@ -131,9 +131,9 @@ namespace Converter
                 i++;
                 for (int l = 0; l < image.Width; l++)
                 {
-                    filteredData[i + l * 3] = image.Pixels[iteratorI][l].R;
-                    filteredData[i + l * 3 + 1] = image.Pixels[iteratorI][l].G;
-                    filteredData[i + l * 3 + 2] = image.Pixels[iteratorI][l].B;
+                    filteredData[i + l * 3] = image.Pixels[iteratorI][l].Red;
+                    filteredData[i + l * 3 + 1] = image.Pixels[iteratorI][l].Green;
+                    filteredData[i + l * 3 + 2] = image.Pixels[iteratorI][l].Blue;
                 }
                 iteratorI++;
                 i += image.Width * 3;

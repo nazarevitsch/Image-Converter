@@ -8,14 +8,25 @@
         <e p="BmpReader.cs" t="Include" />
         <e p="BmpWriter.cs" t="Include" />
         <e p="Converter.csproj" t="IncludeRecursive" />
-        <e p="IImageConverter.cs" t="Include" />
         <e p="IImageReader.cs" t="Include" />
         <e p="IImageWriter.cs" t="Include" />
         <e p="Image" t="Include">
-          <e p="BmpImage.cs" t="Include" />
-          <e p="IImage.cs" t="Include" />
-          <e p="PpmImage.cs" t="Include" />
+          <e p="Image.cs" t="Include" />
+          <e p="Pixel.cs" t="Include" />
+          <e p="bmp" t="Include">
+            <e p="BmpImage.cs" t="Include" />
+          </e>
+          <e p="png" t="Include">
+            <e p="PngChunk.cs" t="Include" />
+            <e p="PngChunkType.cs" t="Include" />
+            <e p="PngHeader.cs" t="Include" />
+          </e>
+          <e p="ppm" t="Include">
+            <e p="PpmImage.cs" t="Include" />
+          </e>
         </e>
+        <e p="PngReader.cs" t="Include" />
+        <e p="PngWriter.cs" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
@@ -26,12 +37,18 @@
           </e>
         </e>
         <e p="resources" t="Include">
+          <e p="Big.png" t="Include" />
+          <e p="BigTest.bmp" t="Include" />
+          <e p="BigTest.png" t="Include" />
+          <e p="Result.png" t="Include" />
+          <e p="Result2.bmp" t="Include" />
           <e p="blackbuck.bmp" t="Include" />
           <e p="boxes_1.ppm" t="Include" />
           <e p="dog.bmp" t="Include" />
           <e p="dog.gif" t="Include" />
           <e p="dog.png" t="Include" />
-          <e p="dog2.bmp" t="Include" />
+          <e p="git.png" t="Include" />
+          <e p="ricardo.png" t="Include" />
           <e p="sample.ppm" t="Include" />
           <e p="stop01.ppm" t="Include" />
           <e p="test.bmp" t="Include" />
@@ -39,12 +56,11 @@
       </e>
       <e p="Converter.sln" t="IncludeFlat" />
       <e p="Convertor" t="IncludeRecursive">
-        <e p="BigTest.bmp" t="Include" />
-        <e p="BigTest.ppm" t="Include" />
-        <e p="BmpToPpmConverter.cs" t="Include" />
+        <e p=".gitignore" t="Include" />
+        <e p="BmpReader.cs" t="Include" />
         <e p="BmpWriter.cs" t="Include" />
         <e p="Compress" t="Include">
-          <e p="GIfLwz.cs" t="Include" />
+          <e p="GifLwz.cs" t="Include" />
           <e p="SharpLZW" t="Include">
             <e p="ANSI.cs" t="Include" />
             <e p="BitReader.cs" t="Include" />
@@ -55,31 +71,63 @@
         </e>
         <e p="Converter.cs" t="Include" />
         <e p="Convertor.csproj" t="IncludeRecursive" />
+        <e p="Convertors" t="Include">
+          <e p="BmpToPpmConverter.cs" t="Include" />
+          <e p="GifToPpmConverter.cs" t="Include" />
+          <e p="IImageConvertor.cs" t="Include" />
+          <e p="PpmToBmpConvertor.cs" t="Include" />
+        </e>
         <e p="Formats" t="Include">
           <e p="Bmp.cs" t="Include" />
-          <e p="Bmp_old.cs" t="Include" />
           <e p="Gif.cs" t="Include" />
+          <e p="IFormatWriter.cs" t="Include" />
           <e p="IImageFormat.cs" t="Include" />
-          <e p="Ppm.cs" t="Include" />
+          <e p="bmp" t="Include">
+            <e p="BmpImage.cs" t="Include" />
+          </e>
+          <e p="png" t="Include">
+            <e p="Png.cs" t="Include" />
+            <e p="PngChunk.cs" t="Include" />
+            <e p="PngChunkType.cs" t="Include" />
+            <e p="PngHeader.cs" t="Include" />
+          </e>
+          <e p="ppm" t="Include">
+            <e p="Ppm.cs" t="Include" />
+          </e>
         </e>
-        <e p="IFormatWriter.cs" t="Include" />
-        <e p="IImageConvertor.cs" t="Include" />
+        <e p="GifWriter.cs" t="Include" />
         <e p="Pixel.cs" t="Include" />
-        <e p="PpmToBmpConvertor.cs" t="Include" />
+        <e p="PngReader.cs" t="Include" />
+        <e p="PngWriter.cs" t="Include" />
         <e p="PpmWriter.cs" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="boxes.bmp" t="Include" />
         <e p="images" t="Include">
+          <e p="Big.png" t="Include" />
           <e p="BigTest.bmp" t="Include" />
+          <e p="banana.gif" t="Include" />
+          <e p="banana1.gif" t="Include" />
           <e p="blackbuck.bmp" t="Include" />
+          <e p="bob.gif" t="Include" />
           <e p="boxes_1.ppm" t="Include" />
+          <e p="circle.gif" t="Include" />
+          <e p="circle2.gif" t="Include" />
           <e p="dog.bmp" t="Include" />
           <e p="dog.gif" t="Include" />
-          <e p="dog2.gif" t="Include" />
+          <e p="dog.png" t="Include" />
+          <e p="giphy.gif" t="Include" />
           <e p="habr.gif" t="Include" />
+          <e p="habr2.gif" t="Include" />
+          <e p="heart.gif" t="Include" />
+          <e p="homer.gif" t="Include" />
+          <e p="loading.gif" t="Include" />
+          <e p="man.gif" t="Include" />
+          <e p="man2.gif" t="Include" />
+          <e p="road.gif" t="Include" />
           <e p="sample.ppm" t="Include" />
           <e p="stop01.ppm" t="Include" />
+          <e p="test.gif" t="Include" />
+          <e p="tree.gif" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -88,6 +136,7 @@
             </e>
           </e>
         </e>
+        <e p="test.bin" t="Include" />
         <e p="test.bmp" t="Include" />
         <e p="test.ppm" t="Include" />
       </e>

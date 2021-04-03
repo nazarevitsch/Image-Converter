@@ -13,19 +13,14 @@
         "build": {
           "build/Microsoft.NETFramework.ReferenceAssemblies.net48.targets": {}
         }
-      }
-    },
-    ".NETFramework,Version=v4.8/win7-x86": {
-      "Microsoft.NETFramework.ReferenceAssemblies/1.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.NETFramework.ReferenceAssemblies.net48": "1.0.0"
-        }
       },
-      "Microsoft.NETFramework.ReferenceAssemblies.net48/1.0.0": {
+      "PNGCompressor/1.0.5": {
         "type": "package",
-        "build": {
-          "build/Microsoft.NETFramework.ReferenceAssemblies.net48.targets": {}
+        "compile": {
+          "lib/net45/PNGCompressor.dll": {}
+        },
+        "runtime": {
+          "lib/net45/PNGCompressor.dll": {}
         }
       }
     }
@@ -421,39 +416,46 @@
         "microsoft.netframework.referenceassemblies.net48.1.0.0.nupkg.sha512",
         "microsoft.netframework.referenceassemblies.net48.nuspec"
       ]
+    },
+    "PNGCompressor/1.0.5": {
+      "sha512": "mRLDsINQH0jfe7W/Jey5t6h0tD3t3W37t0tGrVnoXFi5hlDnO27guGgJOAnErUlcu/LJbwEPNvwe1NbZIqbKhQ==",
+      "type": "package",
+      "path": "pngcompressor/1.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/PNGCompressor.dll",
+        "lib/net45/PNGCompressor.xml",
+        "pngcompressor.1.0.5.nupkg.sha512",
+        "pngcompressor.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.8": [
-      "Microsoft.NETFramework.ReferenceAssemblies >= 1.0.0"
+      "Microsoft.NETFramework.ReferenceAssemblies >= 1.0.0",
+      "PNGCompressor >= 1.0.5"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Sasha\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet": {}
+    "/home/whigra/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Work\\ImageConvertor\\Converter\\Converter.csproj",
+      "projectUniqueName": "/home/whigra/work/ImageConverter/Converter/Converter.csproj",
       "projectName": "Converter",
-      "projectPath": "D:\\Work\\ImageConvertor\\Converter\\Converter.csproj",
-      "packagesPath": "C:\\Users\\Sasha\\.nuget\\packages\\",
-      "outputPath": "D:\\Work\\ImageConvertor\\Converter\\obj\\",
+      "projectPath": "/home/whigra/work/ImageConverter/Converter/Converter.csproj",
+      "packagesPath": "/home/whigra/.nuget/packages/",
+      "outputPath": "/home/whigra/work/ImageConverter/Converter/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Sasha\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "/home/whigra/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net48"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -477,14 +479,13 @@
             "target": "Package",
             "version": "[1.0.0, )",
             "autoReferenced": true
+          },
+          "PNGCompressor": {
+            "target": "Package",
+            "version": "[1.0.5, )"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
-      }
-    },
-    "runtimes": {
-      "win7-x86": {
-        "#import": []
+        "runtimeIdentifierGraphPath": "/usr/lib/mono/msbuild/Current/bin/RuntimeIdentifierGraph.json"
       }
     }
   }

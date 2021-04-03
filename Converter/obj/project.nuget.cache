@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "LNvp6qpgtZ7Zo0ucznxJ3ofX1Q/NaUJ/uf14Q/3wGV9fdQtsJgg+RMJ4uhIJTRXEsIecMM09gQCeddcTm95Jcg==",
+  "dgSpecHash": "zFbCKI0o5a1/bTgt2dlre6RPe2rYeynR5k5sKkF6Mkf2owZH/M5nX5UzIMsJISqAwyTV2JypxHqIk7qfYZakQg==",
   "success": true,
-  "projectFilePath": "D:\\Work\\ImageConvertor\\Converter\\Converter.csproj",
+  "projectFilePath": "/home/whigra/work/ImageConverter/Converter/Converter.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Sasha\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.0\\microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
-    "C:\\Users\\Sasha\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net48\\1.0.0\\microsoft.netframework.referenceassemblies.net48.1.0.0.nupkg.sha512"
+    "/home/whigra/.nuget/packages/microsoft.netframework.referenceassemblies/1.0.0/microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
+    "/home/whigra/.nuget/packages/microsoft.netframework.referenceassemblies.net48/1.0.0/microsoft.netframework.referenceassemblies.net48.1.0.0.nupkg.sha512",
+    "/home/whigra/.nuget/packages/pngcompressor/1.0.5/pngcompressor.1.0.5.nupkg.sha512"
   ],
   "logs": []
 }

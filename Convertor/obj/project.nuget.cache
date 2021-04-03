@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7GaJtpUeHnyBi3tdJn6PCG3reKqeClXi/fRgWMeTMw99lAC9HlqqRrthmeS4d6TgbR9/I32Pu9u5mzCAGAENGw==",
+  "dgSpecHash": "SN+TjVpe3FpQg5W4thOQs8Ts+oNcpPIM/ph1tXBATjtnFc706FomBKmuJtld3v+MtdNTn6Mlgf47ueilbrDniw==",
   "success": true,
-  "projectFilePath": "D:\\Work\\ImageConvertor\\Convertor\\Convertor.csproj",
+  "projectFilePath": "/home/whigra/work/ImageConverter/Convertor/Convertor.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

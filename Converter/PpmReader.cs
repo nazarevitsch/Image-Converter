@@ -72,15 +72,37 @@ namespace Converter
                         var height = int.Parse(pictureSize[0]);
                         var width = int.Parse(pictureSize[1]);
                         var pixels = new Pixel[height][];
-                        for (int pos = (int) memoryStream.Position, col=0, row = 0; pos < bytes.Length - 3; pos+=3, col++)
+                        // for (int row = 0; row < height; row++)
+                        // {
+                        //     var pixelRow = new Pixel[width];
+                        //     for (int col = 0; col < width; col++)
+                        //     {
+                        //         pixelRow[col] = pixelsList[row * width + col];
+                        //     }
+                        //
+                        //     pixels[row] = pixelRow;
+                        // }
+                        for (var i = 0; i < pixels.Length; i++)
                         {
+                            pixels[i] = new Pixel[width];
+                        }
+                        for (int pos = (int) memoryStream.Position, col=0, row = 0; pos < bytes.Length; pos += 3, col++)
+                        {
+                            if (pixels[row] is null)
+                            {
+                                pixels[row] = new Pixel[width];
+                            } 
                             pixels[row][col] = new Pixel
                             {
                                 Red = bytes[pos],
                                 Green = bytes[pos + 1],
                                 Blue = bytes[pos + 2]
                             };
-                            if (col > width * 3) row++;
+                            if (col >= width - 1)
+                            {
+                                row++;
+                                col = -1;
+                            };
                         }
                         return new Image.Image
                         {

@@ -11,7 +11,7 @@ namespace Converter
             
             var bytes = new byte[width * height * 3];
             var bytePos = 0;
-            for (int row = 0 ; row < format.Pixels.Length; row++)
+            for (int row = 0 ; row < height; row++)
             {
                 for (int col = 0; col < width; col++, bytePos+=3)
                 {
